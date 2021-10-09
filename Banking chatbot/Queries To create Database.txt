@@ -1,0 +1,58 @@
+create table login(
+username varchar(255) primary key not null,
+email varchar(255),
+contact_no numeric(10),
+password varchar(255));
+
+Select * from login where username='rakesh' and password='asdf'
+insert into login values("rakesh","rakesh123@gmail.com","9082467094","asdf");
+
+mysql> Select * from login;
++----------+---------------------+------------+---------------------+
+| username | email               | contact_no | password            |
++----------+---------------------+------------+---------------------+
+| amer     | amer15@gmail.com    | 9920122356 | Av45678jhg          |
+| arpita   | 1234567             |       NULL | arpiar123@gmail.com |
+| nidhi    | fghjk               |       NULL | nidhi56@gmail       |
+| priyansi | priyan123@gmail.com | 9920146789 | mnb                 |
+| rakesh   | rakesh123@gmail.com | 9082467094 | asdf                |
+| Riya     | riya89@gmail.com    | 9920145671 | Av67rtyuo           |
+| shreya   | shreya678@gmail.com | 1234567898 | 1234567898          |
++----------+---------------------+------------+---------------------+
+
+
+CREATE TABLE Account_Details(
+Account_no varchar(18) Not NULL PRIMARY KEY,
+Name varchar(255),
+City varchar(255),
+Contact_no numeric(10) Not NULL,
+Current_balance decimal(10,2),
+Acct_type varchar(255) CHECK(Acct_type IN('savings','current')));
+
+INSERT INTO Account_Details VALUES(111112222233333,'Rakesh Kadam','Mumbai',8850312456,10200.50,'savings');
+Insert into Account_Details values(555557777766666,"Amruta Rathore","Mumbai",9920147846,500.34,"savings");
+Insert into Account_Details values(123456789011111,"Clari Joshi","Mumbai",9892583273,500.34,"savings");
+
+CREATE TABLE IFSC1111111(
+Account_no varchar(18) Not NULL PRIMARY KEY,
+Name varchar(255),
+City varchar(255),
+Contact_no numeric(10) Not NULL,
+Current_balance decimal(10,2),
+Acct_type varchar(255) CHECK(Acct_type IN('savings','current')));
+
+CREATE TABLE IFSC2222222(
+Account_no varchar(18) Not NULL PRIMARY KEY,
+Name varchar(255),
+City varchar(255),
+Contact_no numeric(10) Not NULL,
+Current_balance decimal(10,2),
+Acct_type varchar(255) CHECK(Acct_type IN('savings','current')));
+
+INSERT INTO IFSC1111111 VALUES(123456789012345,'Sameer Shah','Mumbai',8850312456,15000.50,'savings');
+Insert into IFSC1111111 values(123456789012346,"Naina Rajpal","Mumbai",9920147846,11570.34,"savings");
+Insert into IFSC1111111 values(123456789012347,"Radha Joshi","Mumbai",9892583273,2500.34,"savings");
+
+INSERT INTO IFSC2222222 VALUES(123456789012355,'Ram Mane','Mumbai',8850312456,15000.50,'savings');
+Insert into IFSC2222222 values(123456789012356,"Mamta Kadam","Mumbai",9920147846,30010.74,"savings");
+Insert into IFSC2222222 values(123456789012357,"Sapna Sawant","Mumbai",9892583273,25900.67,"savings");

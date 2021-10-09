@@ -1,0 +1,127 @@
+{"intents": [
+    {"tag": "greeting",
+     "patterns": ["Hi there","Is anyone there?","Hey","Hola", "Hello", "Good day"],
+     "responses": ["Hello", "Hi, Good to see you again", "Hi there, how can I help?"],
+     "context": [""]
+    },
+    {"tag": "thanks",
+     "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+     "responses": ["Happy to help!", "Any time!", "My pleasure"],
+     "context": [""]
+    },
+    {"tag": "noanswer",
+     "patterns": [],
+     "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
+     "context": [""]
+    },
+    {"tag": "options",
+     "patterns": ["How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered"],
+     "responses": ["I can help you with banking operations", "I am here to help with many banking activities.", "I can answer FAQs, \n Help you check your account balance,\n make transactions, \n help you apply for credit card."],
+     "context": [""]
+    },
+    {"tag":"account_balance",
+     "patterns":["What is the balance in my account?","account balance","Show my account balance.","I want to know the balance in my account"],
+     "responses":["Kindly share your account number"],
+     "context": ["account_balance_get_otp"]
+    },
+    {"tag":"account_balance_get_otp",
+     "patterns":[],
+     "responses":["We have sent an OTP on your registered mobile number. Enter OTP: "],
+     "context":[""]
+    },
+    {"tag": "account_balance_final",
+     "patterns": [],
+     "responses": ["Verifivation & Checking balance in progress.. "],
+     "context":[""]
+    },
+    {"tag": "transfer_money",
+     "patterns": ["I want to transfer money.", "Please do a transaction for me.", "Can you perform a transaction?", "Transfer some money." ],
+     "responses": ["Receipent is Same bank user or External bank user."],
+     "context":[""]
+    },
+    {"tag": "transfer_money_to_external_bank_user",
+     "patterns": ["External bank user", "external", "External user", "ext user","ext"],
+     "responses": ["Enter IFSC code of bank : "],
+     "context":["transfer_money_initial"]
+    },
+    {"tag": "transfer_money_initial",
+     "patterns": ["Same bank user", "same"],
+     "responses": ["Enter receiver's account number : "],
+     "context":["transfer_money_getAmount"]
+    },
+    {"tag": "transfer_money_getAmount",
+     "patterns": [],
+     "responses": ["Enter enter amount : "],
+     "context":["transfer_money_getSenders_acc_no"]
+    },
+    {"tag": "transfer_money_getSenders_acc_no",
+     "patterns": [],
+     "responses": ["Enter your account number to proceed : "],
+     "context":["transfer_money_get_otp"]
+    },
+    {"tag":"transfer_money_get_otp",
+     "patterns":[],
+     "responses":["We have sent an OTP on your registered mobile number. Enter OTP: "],
+     "context":[""]
+    },
+    {"tag": "transfer_money_final",
+     "patterns": [],
+     "responses": ["Verifivation & Transaction in progress.. "],
+     "context":[""]
+    },
+    {
+        "tag": "name",
+        "patterns": ["what is your name","what should I call you?","whats your name?","who are you?"],
+        "responses": ["You can call me Clari.","I'm Clari!","I'm chatbot aka Clari."],
+        "context_set": [""]
+    },
+    {
+        "tag": "credit_card",
+        "patterns": ["I want to apply for credit card", "How do I apply for credit card?","What is the procedure to apply for credit card?","Credit card application"],
+        "responses": ["Submit a duly completed and signed application form to the Branch. Make sure your KYC documents are verified.For more details, refer to the link: https://www.bankofindia.co.in/CreditCardfaq"],
+        "context": [""]
+    },
+    {
+        "tag": "FAQs1",
+        "patterns": ["Who can apply for ATM/Debit Card?", "Who can apply for ATM Card?", "Eligibilty to apply for ATM or Debit card"],
+        "responses": ["Any individual account holder having Savings Bank or Current Account, single, or joint account operated as Either or Survivor / Former or Survivor / Later or Survivor/ Anyone or Survivor / Pensioners, NRE account holders."],
+        "context": [""]
+    },
+    {
+        "tag": "FAQs2",
+        "patterns": ["What are the types of accounts in banks?", "Provide list of type of accounts", "Types of accounts"],
+        "responses": ["a) Checking Account: You can access the account as the saving account but, unlike saving account, you cannot earn interest on this account. The benefit of this account is that there is no limit for withdrawal. \n b) Saving Account: You can save your money in such account and also earn interest on it. The number of withdrawal is limited and need to maintain the minimum amount of balance in the account to remain active.\n c) Money Market Account: This account gives benefits of both saving and checking accounts. You can withdraw the amount and yet you can earn higher interest on it. This account can be opened with a minimum balance.\n d) CD (Certificate of Deposits) Account: In such account you have to deposit your money for the fixed period of time (5-7 years), and you will earn the interest on it. The rate of interest is decided by the bank, and you cannot withdraw the funds until the fixed period expires."],
+        "context": [""]
+    },
+    {
+        "tag": "FAQs3",
+        "patterns": ["What are the different ways you can operate your accounts?","How can I operate my account?"],
+        "responses": ["You can operate your bank accounts in different ways like \n a) Internet banking \n b) Telephone or Mobile banking \n c) Branch or Over the counter service \n d) ATM ( Automated Teller Machine)"],
+        "context": [""]
+    },
+    {
+        "tag": "FAQs4",
+        "patterns": ["What is the procedure to deactiviate an account?","I want to close my account.", "Method to deactivate an account", "Process for deactivation of an account"],
+        "responses": ["To close the account, call your bank, visit the bank in person, or write a letter to their offices. Your bank will have you sign an account closing form to make it official. If you don't withdraw the cash first, then your bank will send you a check when the account has closed."],
+        "context": [""]
+    },
+    {
+        "tag": "FAQs5",
+        "patterns": ["I donot have Savings Bank Account with your bank, Can I apply for Gold Loan"],
+        "responses": ["Yes, you can open SB Account with our bank and can Apply for Gold Loan. Please visit your nearest Branch."],
+        "context": [""]
+    },
+    {
+        "tag": "change_mobile_number",
+        "patterns": ["My current mobile no. is different from the one registered for Credit Card. How can I change it?", "I want to change registered mobile number."],
+        "responses": ["You can send the following documents: Written & signed application for change in contact number, mentioning the 16 digit card number and the new mobile number. \nAnyone of the following self-attested documents: Residence Address proof as per Card records, ID Proof. \nPlease e-mail the above documents to contactchange@bank.com"],
+        "context": [""]
+    },
+    {
+        "tag": "unsuccessful_events",
+        "patterns": ["I didn’t receive the the money", "The money was transferred to the wrong account.", "Transaction failed", "transaction made by me was unccessful", "Money transffered but not received", "money got deducted from my account","online transaction failed but amount deducted from account", "my transaction is successful but the beneficiary has not received the amount yet"],
+        "responses": ["Sorry for the inconvenience! We will reach out to you on call shortly.", "Apologies for the trouble! We will contact you via call soon."],
+        "context": [""]
+    }
+]
+}
