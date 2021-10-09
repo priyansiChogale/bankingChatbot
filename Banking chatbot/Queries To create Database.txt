@@ -4,22 +4,7 @@ email varchar(255),
 contact_no numeric(10),
 password varchar(255));
 
-Select * from login where username='rakesh' and password='asdf'
 insert into login values("rakesh","rakesh123@gmail.com","9082467094","asdf");
-
-mysql> Select * from login;
-+----------+---------------------+------------+---------------------+
-| username | email               | contact_no | password            |
-+----------+---------------------+------------+---------------------+
-| amer     | amer15@gmail.com    | 9920122356 | Av45678jhg          |
-| arpita   | 1234567             |       NULL | arpiar123@gmail.com |
-| nidhi    | fghjk               |       NULL | nidhi56@gmail       |
-| priyansi | priyan123@gmail.com | 9920146789 | mnb                 |
-| rakesh   | rakesh123@gmail.com | 9082467094 | asdf                |
-| Riya     | riya89@gmail.com    | 9920145671 | Av67rtyuo           |
-| shreya   | shreya678@gmail.com | 1234567898 | 1234567898          |
-+----------+---------------------+------------+---------------------+
-
 
 CREATE TABLE Account_Details(
 Account_no varchar(18) Not NULL PRIMARY KEY,
